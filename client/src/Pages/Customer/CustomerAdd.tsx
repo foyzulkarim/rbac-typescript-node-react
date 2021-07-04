@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Form, Input, Button, PageHeader, Divider } from "antd";
+import { Form, Input, Button } from "antd";
 
 const layout = {
     labelCol: {
@@ -10,14 +10,12 @@ const layout = {
     },
 };
 
-const ProductAdd: FC = () => {
+const CustomerAdd: FC = () => {
     return (
         <Form {...layout} name="nest-messages">
-            <PageHeader title="Add Product" />
-            <Divider />
             <Form.Item
-                name={["user", "product-name"]}
-                label="Product Name"
+                name={["user", "customer-name"]}
+                label="Customer Name"
                 rules={[
                     {
                         required: true,
@@ -27,8 +25,8 @@ const ProductAdd: FC = () => {
                 <Input />
             </Form.Item>
             <Form.Item
-                name={["user", "sku"]}
-                label="SKU"
+                name={["user", "address"]}
+                label="Address"
                 rules={[
                     {
                         type: "string",
@@ -38,20 +36,20 @@ const ProductAdd: FC = () => {
                 <Input />
             </Form.Item>
             <Form.Item
-                name={["user", "unit-price"]}
-                label="Unit Price"
+                name={["user", "phone"]}
+                label="Contact Number"
                 rules={[
                     {
-                        type: "number",
+                        type: "string",
                     },
                 ]}
             >
                 <Input />
             </Form.Item>
-            <Form.Item name={["user", "tags"]} label="Tags">
+            <Form.Item name={["user", "email"]} label="Email">
                 <Input />
             </Form.Item>
-            <Form.Item name={["user", "description"]} label="Description">
+            <Form.Item name={["user", "tags"]} label="Tags">
                 <Input.TextArea />
             </Form.Item>
             <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 4 }}>
@@ -63,4 +61,4 @@ const ProductAdd: FC = () => {
     );
 };
 
-export default ProductAdd;
+export default CustomerAdd;

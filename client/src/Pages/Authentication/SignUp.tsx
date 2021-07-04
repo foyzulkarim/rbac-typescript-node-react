@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Form, Input, Button, PageHeader, Divider } from "antd";
+import { Form, Input, Button } from "antd";
 
 const layout = {
     labelCol: {
@@ -10,14 +10,12 @@ const layout = {
     },
 };
 
-const ProductAdd: FC = () => {
+const SignUp: FC = () => {
     return (
         <Form {...layout} name="nest-messages">
-            <PageHeader title="Add Product" />
-            <Divider />
             <Form.Item
-                name={["user", "product-name"]}
-                label="Product Name"
+                name={["user", "name"]}
+                label="Name"
                 rules={[
                     {
                         required: true,
@@ -27,8 +25,8 @@ const ProductAdd: FC = () => {
                 <Input />
             </Form.Item>
             <Form.Item
-                name={["user", "sku"]}
-                label="SKU"
+                name={["user", "email"]}
+                label="Email"
                 rules={[
                     {
                         type: "string",
@@ -38,21 +36,21 @@ const ProductAdd: FC = () => {
                 <Input />
             </Form.Item>
             <Form.Item
-                name={["user", "unit-price"]}
-                label="Unit Price"
+                name={["user", "phone"]}
+                label="Contact Number"
                 rules={[
                     {
-                        type: "number",
+                        type: "string",
                     },
                 ]}
             >
                 <Input />
             </Form.Item>
-            <Form.Item name={["user", "tags"]} label="Tags">
-                <Input />
+            <Form.Item name={["user", "password"]} label="Password">
+                <Input.Password />
             </Form.Item>
-            <Form.Item name={["user", "description"]} label="Description">
-                <Input.TextArea />
+            <Form.Item name={["user", "password"]} label="Confirm Password">
+                <Input.Password />
             </Form.Item>
             <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 4 }}>
                 <Button type="primary" htmlType="submit">
@@ -63,4 +61,4 @@ const ProductAdd: FC = () => {
     );
 };
 
-export default ProductAdd;
+export default SignUp;

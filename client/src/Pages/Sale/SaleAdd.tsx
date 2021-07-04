@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Form, Input, Button, PageHeader, Divider } from "antd";
+import { Form, Input, Button } from "antd";
 
 const layout = {
     labelCol: {
@@ -10,14 +10,12 @@ const layout = {
     },
 };
 
-const ProductAdd: FC = () => {
+const SaleAdd: FC = () => {
     return (
         <Form {...layout} name="nest-messages">
-            <PageHeader title="Add Product" />
-            <Divider />
             <Form.Item
-                name={["user", "product-name"]}
-                label="Product Name"
+                name={["user", "sale-name"]}
+                label="Sale Name"
                 rules={[
                     {
                         required: true,
@@ -63,4 +61,4 @@ const ProductAdd: FC = () => {
     );
 };
 
-export default ProductAdd;
+export default SaleAdd;
