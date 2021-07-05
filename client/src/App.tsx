@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
-import { Button } from 'antd';
+import { BrowserRouter as Router } from "react-router-dom";
 import './App.css';
+import MainLayout from './Layout/MainLayout';
 
 const App: FC = () => (
-  <div className="App">
-    <Button type="primary">Button</Button>
-  </div>
+  <Router>
+    <MainLayout />
+  </Router>
 );
 
 export default App;
