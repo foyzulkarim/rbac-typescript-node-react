@@ -6,6 +6,7 @@ import ProductAdd from "../Pages/Product/ProductAdd";
 import ProductList from "../Pages/Product/ProductList";
 import CustomerAdd from "../Pages/Customer/CustomerAdd";
 import CustomerList from "../Pages/Customer/CustomerList";
+import CustomerDetail from '../Pages/Customer/CustomerDetail';
 import PurchaseAdd from "../Pages/Purchase/PurchaseAdd";
 import PurchaseList from "../Pages/Purchase/PurchaseList";
 import SaleAdd from "../Pages/Sale/SaleAdd";
@@ -87,7 +88,8 @@ const MainLayout: FC = () => {
                         <Route path="/products/add" component={ProductAdd} />
                         <Route path="/products/list" component={ProductList} />
                         <Route path="/customers/add" component={CustomerAdd} />
-                        <Route path="/customers/list" component={CustomerList} />
+                        <Route exact path="/customers/list" component={CustomerList} />
+                        <Route exact path="/customers/list/:id" component={CustomerDetail} />
                         <Route path="/purchases/add" component={PurchaseAdd} />
                         <Route path="/purchases/list" component={PurchaseList} />
                         <Route path="/sales/add" component={SaleAdd} />
